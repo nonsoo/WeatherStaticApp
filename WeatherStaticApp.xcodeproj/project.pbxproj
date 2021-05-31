@@ -13,6 +13,7 @@
 		BEEFE3AF26652E0500E84B71 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEEFE3AE26652E0500E84B71 /* Preview Assets.xcassets */; };
 		BEEFE3BA26652E0500E84B71 /* WeatherStaticAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEFE3B926652E0500E84B71 /* WeatherStaticAppTests.swift */; };
 		BEEFE3C526652E0500E84B71 /* WeatherStaticAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEFE3C426652E0500E84B71 /* WeatherStaticAppUITests.swift */; };
+		BEEFE3D32665418200E84B71 /* WeatherBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEFE3D22665418200E84B71 /* WeatherBtn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		BEEFE3C026652E0500E84B71 /* WeatherStaticAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherStaticAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEEFE3C426652E0500E84B71 /* WeatherStaticAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherStaticAppUITests.swift; sourceTree = "<group>"; };
 		BEEFE3C626652E0500E84B71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEEFE3D22665418200E84B71 /* WeatherBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherBtn.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			children = (
 				BEEFE3A726652E0100E84B71 /* WeatherStaticAppApp.swift */,
 				BEEFE3A926652E0100E84B71 /* ContentView.swift */,
+				BEEFE3D22665418200E84B71 /* WeatherBtn.swift */,
 				BEEFE3AB26652E0500E84B71 /* Assets.xcassets */,
 				BEEFE3B026652E0500E84B71 /* Info.plist */,
 				BEEFE3AD26652E0500E84B71 /* Preview Content */,
@@ -261,6 +264,7 @@
 			files = (
 				BEEFE3AA26652E0100E84B71 /* ContentView.swift in Sources */,
 				BEEFE3A826652E0100E84B71 /* WeatherStaticAppApp.swift in Sources */,
+				BEEFE3D32665418200E84B71 /* WeatherBtn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
