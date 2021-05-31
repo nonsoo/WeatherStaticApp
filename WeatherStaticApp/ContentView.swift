@@ -8,24 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var isDayTime = true
+    @State private var isNight = false
     
     var body: some View {
         ZStack(){
-            BackgroundView(topColour: .blue, bottomColour: Color("LightBlue"))
+            BackgroundView(isNight: $isNight)
             
             VStack{
-                HeaderWeatherView(imageName: "cloud.sun.fill", temp: 32, cityName: "Toronto, ON")
+                HeaderWeatherView(imageName: isNight ? "moon.stars.fill":"cloud.sun.fill", temp: 32, cityName: "Toronto, ON")
                 Spacer()
                 HStack(spacing:50){
                     WeatherDayView(dayMonth:"Tues", imageName:"cloud.sun.fill", temp:32)
-                    WeatherDayView(dayMonth:"Wed", imageName:"cloud.rain.fill", temp:33)
+                    WeatherDayView(dayMonth:"Wed", imageName:"wind", temp:27)
                     WeatherDayView(dayMonth:"Thurs", imageName:"cloud.fill", temp:28)
                 }
                 
                 Spacer()
                 Button{
-                    isDayTime.toggle()
+                    isNight.toggle()
                 }label:{
                     WeatherBtn(btnTitle: "Change Day Time",
                                btnColour: .white,
@@ -68,10 +68,10 @@ struct WeatherDayView: View {
 }
 
 struct BackgroundView: View {
-    var topColour:Color
-    var bottomColour:Color
+   @Binding var isNight: Bool
+    
     var body: some View {
-        LinearGradient(gradient: Gradient(colors: [topColour,bottomColour]), startPoint: .topLeading, endPoint: .bottomTrailing).ignoresSafeArea()
+        LinearGradient(gradient: Gradient(colors: [isNight ? .black :.blue,isNight ? .gray : Color("LightBlue")]), startPoint: .topLeading, endPoint: .bottomTrailing).ignoresSafeArea()
     }
 }
 
